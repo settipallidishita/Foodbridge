@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/surface">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Donation Details"
+            app:titleTextColor="@color/on_surface"
+            app:navigationIcon="@android:drawable/ic_menu_revert"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/surface_container"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="16dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!-- Placeholder for Food Image -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@color/surface_container_high"/>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45 Servings"
+                            android:background="@drawable/badge_secondary"
+                            android:textColor="@color/on_secondary_container"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:padding="12dp"
+                        android:background="#66000000">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fresh Paneer Biryani &amp; Dal Makhani"
+                            android:textColor="@color/on_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Metadata -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_bg_surface_high"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#FB-2025-08492"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Timeline -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rescue Timeline"
+                android:textColor="@color/on_surface"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_bg_surface_high"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+                <!-- Example Step -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="✓ Donation Posted" android:textStyle="bold"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="✓ Accepted by NGO" android:textStyle="bold"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="O Pickup Assigned (En Route)" android:textColor="@color/primary" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Volunteer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assigned Rescue Hero"
+                android:textColor="@color/on_surface"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_bg_surface_high"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Arjun Kumar" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Electric Scooter · KA-03-EK-4521" android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <!-- OTP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/badge_bg"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DONOR HANDOVER OTP"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share with Arjun upon collection"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8 4 9 2"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:background="@color/surface_container_lowest"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Action -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/surface"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_track_live"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Track Live Delivery"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="8dp"/>
+            
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
